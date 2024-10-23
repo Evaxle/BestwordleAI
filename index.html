@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle AI Solver</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        input { width: 50px; text-align: center; }
+        table { margin-bottom: 20px; }
+        .correct { background-color: lightgreen; }
+        .present { background-color: yellow; }
+        .absent { background-color: lightgray; }
+    </style>
+</head>
+<body>
+    <h1>Wordle AI Solver</h1>
+    <p>Input the results of your guesses, and the AI will suggest the next best word.</p>
+    
+    <table id="wordle-input">
+        <tr>
+            <td><input type="text" maxlength="1" id="letter1" /></td>
+            <td><input type="text" maxlength="1" id="letter2" /></td>
+            <td><input type="text" maxlength="1" id="letter3" /></td>
+            <td><input type="text" maxlength="1" id="letter4" /></td>
+            <td><input type="text" maxlength="1" id="letter5" /></td>
+        </tr>
+        <tr>
+            <td><select id="status1">
+                <option value="gray">Gray</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select></td>
+            <td><select id="status2">
+                <option value="gray">Gray</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select></td>
+            <td><select id="status3">
+                <option value="gray">Gray</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select></td>
+            <td><select id="status4">
+                <option value="gray">Gray</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select></td>
+            <td><select id="status5">
+                <option value="gray">Gray</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+            </select></td>
+        </tr>
+    </table>
+
+    <button onclick="findNextWord()">Find Next Word</button>
+
+    <h2>Suggested Next Word: <span id="suggested-word">----</span></h2>
+
+    <script src="wordle-solver.js"></script>
+</body>
+</html>
